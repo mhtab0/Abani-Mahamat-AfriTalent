@@ -1,20 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent - About</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><img src="image/logo.png" width="150"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary ms-lg-3">Rejoindre AfriTalent</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== SECTION HISTOIRE ========== -->
+    <main class="container my-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h1>Notre histoire</h1>
+                <p class="lead">Née en 2022 à Dakar, AfriTalent est née d'un constat simple : l'Afrique regorge de talents tech exceptionnels.</p>
+                <p>Aujourd'hui, nous connectons plus de 2500 freelances à des entreprises du monde entier. Notre mission : rendre le travail indépendant accessible, sécurisé et valorisant pour les développeurs, designers et experts tech africains.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="image/im2.webp" alt="Histoire AfriTalent" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <!-- ========== VALEURS ========== -->
+        <div class="my-5">
+            <h2 class="text-center mb-4">Nos valeurs</h2>
+            <div class="row text-center g-4">
+                <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                        <h4>💡 Innovation</h4>
+                        <p>À la pointe des technologies</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                        <h4>🤝 Accessibilité</h4>
+                        <p>Pour tous les talents africains</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                        <h4>🌍 Communauté</h4>
+                        <p>L'entraide avant tout</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border rounded">
+                        <h4>🏆 Excellence</h4>
+                        <p>Qualité et sérieux garantis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== CHIFFRES CLÉS ========== -->
+        <div class="my-5 text-center">
+            <h2 class="text-center mb-4">AfriTalent en chiffres</h2>
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <p><strong>2022</strong></p>
+                    <p>Année de création</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <p><strong>+2500</strong></p>
+                    <p>Freelances</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <p><strong>+800</strong></p>
+                    <p>Entreprises</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <p><strong>+15</strong></p>
+                    <p>Pays couverts</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== ÉQUIPE ========== -->
+        <div class="my-5">
+            <h2 class="text-center mb-4">L'équipe fondatrice</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-3 col-6">
+                    <div class="p-3 border rounded">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophie Martin" class="rounded-circle mb-3" width="100">
+                        <h5>Sophie Martin</h5>
+                        <p>CEO & Co-fondatrice</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3 border rounded">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Thomas Bernard" class="rounded-circle mb-3" width="100">
+                        <h5>Thomas Bernard</h5>
+                        <p>CTO & Co-fondateur</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3 border rounded">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Lisa Thompson" class="rounded-circle mb-3" width="100">
+                        <h5>Lisa Thompson</h5>
+                        <p>Responsable communauté</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="p-3 border rounded">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Chen" class="rounded-circle mb-3" width="100">
+                        <h5>David Chen</h5>
+                        <p>Chef Developpeur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>🌍 AfriTalent</h5>
+                    <p>Plateforme de mise en relation freelances tech africains / entreprises.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Liens</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Accueil</a></li>
+                        <li><a href="freelances.html" class="text-white text-decoration-none">Freelances</a></li>
+                        <li><a href="tarifs.html" class="text-white text-decoration-none">Tarifs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Ressources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>📧 mahamatabaniafritalent.com</li>
+                        <li>📞 +221 78 750 68 71</li>
+                        <li>📍 Dakar, Senegal</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 AfriTalent</p>
+        </div>
+    </footer>
 
 
     
     
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

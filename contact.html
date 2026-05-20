@@ -1,21 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriTalent - Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+   <!-- ========== NAVBAR BOOTSTRAP ========== -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><img src="image/logo.png" width="150"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary ms-lg-3">Rejoindre AfriTalent</a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- ========== SECTION CONTACT ========== -->
+    <main class="container my-5">
+        <h1 class="text-center mb-5">Contactez-nous</h1>
 
+        <div class="row g-5">
+            <!-- COLONNE GAUCHE : FORMULAIRE -->
+            <div class="col-lg-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom *</label>
+                        <input type="text" class="form-control" id="nom">
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom *</label>
+                        <input type="text" class="form-control" id="prenom">
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
 
+                    <div class="mb-3">
+                        <label for="sujet" class="form-label">Sujet</label>
+                        <select class="form-select" id="sujet">
+                            <option>Devenir freelance</option>
+                            <option>Recruter un talent</option>
+                            <option>Information générale</option>
+                            <option>Support technique</option>
+                        </select>
+                    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea class="form-control" id="message" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Envoyer le message</button>
+                </form>
+            </div>
+
+            <!-- COLONNE DROITE : INFOS + GOOGLE MAPS -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-light rounded-4 mb-4">
+                    <h4>📍 Nos coordonnées</h4>
+                    <p><strong>Adresse :</strong> Immeuble Talents, 123 Rue de la Tech, Dakar, Sénégal</p>
+                    <p><strong>Téléphone :</strong> +221 78 750 68 71</p>
+                    <p><strong>Email :</strong> mahamatabani@afritalent.com</p>
+                    <p><strong>Horaires :</strong> Lundi - Vendredi : 9h - 18h</p>
+                </div>
+
+                <!-- Google Maps (Dakar, Sénégal) -->
+                <div class="rounded-4 overflow-hidden shadow-sm">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.729997279247!2d-17.4522972!3d14.6934252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172c4b5c8d3f9%3A0x8b7e5b2f4c6d8a1!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1698765432100!5m2!1sfr!2sfr" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius:16px;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>🌍 AfriTalent</h5>
+                    <p>Plateforme de mise en relation freelances tech africains / entreprises.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Liens</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Accueil</a></li>
+                        <li><a href="freelances.html" class="text-white text-decoration-none">Freelances</a></li>
+                        <li><a href="tarifs.html" class="text-white text-decoration-none">Tarifs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Ressources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>📧 mahamatabani@afritalent.com</li>
+                        <li>📞 +221 78 750 68 71</li>
+                        <li>📍 Dakar, Senegal</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center mb-0">&copy; 2025 AfriTalent</p>
+        </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
