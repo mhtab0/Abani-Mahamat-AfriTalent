@@ -239,3 +239,268 @@ p {
   background-color: var(--color-primary);
   color: #ffffff;
 }
+/* ===== SECTION HERO ===== */
+.section-hero {
+  background-color: var(--color-light);
+  padding: var(--space-xl) 0 var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+ 
+.section-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(27,108,168,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+ 
+/* H1 typographie expressive */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1.1;
+  margin-bottom: var(--space-sm);
+  letter-spacing: -1px;
+}
+ 
+.hero-accent { color: var(--color-accent); }
+ 
+/* H2 sous-titre */
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #6b7a8d;
+  margin-bottom: var(--space-md);
+  max-width: 480px;
+}
+ 
+/* Image en disposition asymétrique */
+.hero-image {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+ 
+/* Statistiques */
+.hero-stats {
+  border-top: 1px solid rgba(27,108,168,0.15);
+  padding-top: var(--space-md);
+  margin-top: var(--space-md);
+}
+ 
+.stat-chiffre {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 0;
+}
+ 
+.stat-label {
+  font-size: var(--fs-small);
+  color: #6b7a8d;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+ 
+ 
+/* ===== SECTION COMMENT CA MARCHE — Bento Grid ===== */
+.section-how {
+  padding: var(--space-xl) 0;
+  background-color: #ffffff;
+}
+ 
+/* CSS Grid — disposition modulaire asymétrique */
+.bento-grid-how {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.25rem;
+  margin-top: var(--space-md);
+}
+ 
+/* Grande carte : 2 colonnes x 2 lignes */
+.bento-card--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+ 
+/* Carte large : 2 colonnes */
+.bento-card--wide {
+  grid-column: span 2;
+}
+ 
+/* Toutes les cartes bento */
+.bento-card {
+  background-color: var(--color-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  border: 1px solid rgba(27,108,168,0.08);
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+ 
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+ 
+.step-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(27,108,168,0.12);
+  line-height: 1;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+ 
+.step-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+ 
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: var(--space-xs);
+}
+ 
+ 
+/* ===== SECTION CATEGORIES — effets hover CSS ===== */
+.section-categories {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-light);
+}
+ 
+/* Hover : ombre + transformation + changement de couleur */
+.category-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+  border: 1px solid rgba(27,108,168,0.1);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base),
+              border-color var(--transition-base);
+}
+ 
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+ 
+.cat-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: var(--space-sm);
+  transition: color var(--transition-fast);
+}
+ 
+.category-card:hover .cat-icon {
+  color: var(--color-accent);
+}
+ 
+.cat-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: var(--space-xs);
+}
+ 
+.cat-count {
+  font-size: var(--fs-small);
+  color: #6b7a8d;
+  margin-bottom: 0;
+}
+ 
+ 
+/* ===== SECTION TEMOIGNAGES — Carousel Bootstrap ===== */
+.section-testimonials {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-dark);
+}
+ 
+.section-testimonials .section-title {
+  color: #ffffff;
+}
+ 
+.testimonial-card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+ 
+.testimonial-avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto var(--space-sm);
+  border: 3px solid var(--color-accent);
+}
+ 
+.testimonial-quote {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+ 
+.testimonial-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+ 
+.testimonial-role {
+  font-size: var(--fs-small);
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+ 
+.testimonial-stars {
+  color: var(--color-accent);
+  font-size: 1rem;
+}
+ 
+/* Boutons du carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(245,166,35,0.3);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+ 
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(245,166,35,0.6);
+}
+ 
+
+
+
+
