@@ -1,0 +1,241 @@
+/* Commit 3 */
+/* 1. GOOGLE FONTS — 2 polices importées */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+
+/* 2. VARIABLES CSS — :root (6 variables minimum) */
+:root {
+  /* --- Couleurs (5 couleurs principales) --- */
+  --color-primary:   #1B6CA8;   /* bleu profond  */
+  --color-accent:    #F5A623;   /* or africain   */
+  --color-dark:      #0D1B2A;   /* quasi-noir    */
+  --color-light:     #F4F7FB;   /* blanc cassé   */
+  --color-text:      #2C3E50;   /* gris texte    */
+
+  /* --- Polices --- */
+  --font-display:    'Syne', sans-serif;
+  --font-body:       'Inter', sans-serif;
+
+  /* --- Espacements --- */
+  --space-xs:        0.5rem;
+  --space-sm:        1rem;
+  --space-md:        2rem;
+  --space-lg:        4rem;
+  --space-xl:        6rem;
+
+  /* --- Tailles de police --- */
+  --fs-hero:         clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h1:           clamp(2rem, 4vw, 3rem);
+  --fs-h2:           clamp(1.5rem, 3vw, 2rem);
+  --fs-h3:           1.25rem;
+  --fs-body:         1rem;
+  --fs-small:        0.875rem;
+
+  /* --- Border radius --- */
+  --radius-sm:       0.5rem;
+  --radius-md:       1rem;
+  --radius-lg:       1.5rem;
+  --radius-full:     999px;
+
+  /* --- Ombres --- */
+  --shadow-sm:       0 2px 8px rgba(13, 27, 42, 0.08);
+  --shadow-md:       0 8px 24px rgba(13, 27, 42, 0.12);
+  --shadow-lg:       0 16px 48px rgba(13, 27, 42, 0.16);
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+
+  /* --- Navbar --- */
+  --navbar-height:   72px;
+}
+
+
+/* 3. RESET CSS & STYLES DE BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  background-color: #ffffff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Décalage général pour la navbar fixe */
+main {
+  padding-top: var(--navbar-height);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* Accessibilité clavier */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 4. TYPOGRAPHIE — Polices appliquées */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p {
+  margin-bottom: var(--space-sm);
+  line-height: 1.75;
+}
+
+/* Classe utilitaire pour les titres de section */
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  color: var(--color-dark);
+  margin-bottom: var(--space-sm);
+}
+
+/* Classe utilitaire pour les sous-titres de section */
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #6b7a8d;
+  margin-bottom: var(--space-md);
+}
+
+
+/* 5. NAVBAR — Logo visible, liens alignés */
+#mainNavbar {
+  background-color: #ffffff;
+  height: var(--navbar-height);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Logo texte */
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -0.5px;
+}
+
+/* Couleur accent sur la 2e partie du logo */
+.logo-accent {
+  color: var(--color-accent);
+}
+
+/* Liens de navigation */
+#mainNavbar .nav-link {
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 0.5rem 0.75rem;
+  transition: color var(--transition-fast);
+}
+
+#mainNavbar .nav-link:hover,
+#mainNavbar .nav-link.active {
+  color: var(--color-primary);
+}
+
+#mainNavbar .nav-link.active {
+  font-weight: 600;
+}
+
+/* Bouton CTA dans la navbar */
+.btn-cta {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  transition: background-color var(--transition-fast);
+}
+
+.btn-cta:hover {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  color: #ffffff;
+}
+
+/* Hamburger mobile */
+.navbar-toggler {
+  border-color: var(--color-primary);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231B6CA8' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* 6. BOUTONS GLOBAUX */
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}
+
+.btn-outline-primary {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
