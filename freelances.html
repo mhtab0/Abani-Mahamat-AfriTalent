@@ -18,7 +18,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="index.html" aria-label="AfriTalent - Accueil">
-                   <img src="image/logo.png" alt="Logo" height="10" width="200">
+                    <img src="image/logo.png" alt="Logo" height="10" width="200">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
@@ -37,6 +37,11 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                     <div class="d-flex align-items-center gap-3">
+                        <!-- Toggle Dark Mode -->
+                        <button id="darkModeToggle" class="btn btn-outline-secondary btn-sm"
+                            aria-label="Activer le mode sombre">
+                            <i class="bi bi-moon-fill" aria-hidden="true"></i>
+                        </button>
                         <a href="freelances.html" class="btn btn-primary btn-cta">Rejoindre AfriTalent</a>
                     </div>
                 </div>
@@ -95,8 +100,8 @@
                         <article class="freelancer-card card h-100">
                             <div class="card-body">
                                 <div class="freelancer-header d-flex align-items-center gap-3">
-                                    <img src="image/homme1.jpg" alt="Photo de Mamadou Ndiaye"
-                                        class="freelancer-avatar" width="60" height="60" />
+                                    <img src="image/homme1.jpg" alt="Photo de Mamadou Ndiaye" class="freelancer-avatar"
+                                        width="60" height="60" />
                                     <div>
                                         <h2 class="freelancer-name">Mamadou Ndiaye</h2>
                                         <p class="freelancer-specialty">Développeur Full-Stack</p>
@@ -179,8 +184,8 @@
                         <article class="freelancer-card card h-100">
                             <div class="card-body">
                                 <div class="freelancer-header d-flex align-items-center gap-3">
-                                    <img src="image/femme3.jpg" alt="Photo de Ngozi Okonkwo"
-                                        class="freelancer-avatar" width="60" height="60" />
+                                    <img src="image/femme3.jpg" alt="Photo de Ngozi Okonkwo" class="freelancer-avatar"
+                                        width="60" height="60" />
                                     <div>
                                         <h2 class="freelancer-name">Ngozi Okonkwo</h2>
                                         <p class="freelancer-specialty">Experte en Marketing Digital</p>
@@ -292,8 +297,8 @@
                         <article class="freelancer-card card h-100">
                             <div class="card-body">
                                 <div class="freelancer-header d-flex align-items-center gap-3">
-                                    <img src="image/femme1.jpg" alt="Photo de Awa Sarr"
-                                        class="freelancer-avatar" width="60" height="60" />
+                                    <img src="image/femme1.jpg" alt="Photo de Awa Sarr" class="freelancer-avatar"
+                                        width="60" height="60" />
                                     <div>
                                         <h2 class="freelancer-name">Awa Sarr</h2>
                                         <p class="freelancer-specialty">Motion Designer</p>
@@ -405,7 +410,10 @@
         </div>
     </footer>
 
-
+    <!-- Bouton retour en haut -->
+    <button id="backToTop" class="btn btn-primary" aria-label="Retour en haut de la page">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </button>
 
 
 
