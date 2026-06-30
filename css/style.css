@@ -1412,3 +1412,19 @@ body.dark-mode .cat-title,
 body.dark-mode .step-title {
   color: #ffffff;
 }
+
+/*COMMIT 7 : animation fade-in au scroll */
+ 
+/* Etat initial : section invisible et légèrement décalée vers le bas */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease,
+  transform 0.8s ease;
+}
+ 
+/* Etat final : section visible (classe ajoutée par main.js via IntersectionObserver) */
+.fade-section.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

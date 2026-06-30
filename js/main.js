@@ -58,7 +58,7 @@ if (darkModeToggle) {
 }
 
 
-/* 2. NAVBAR DYNAMIQUE AU SCROLL — effet shrink + ombre */
+/* NAVBAR DYNAMIQUE AU SCROLL — effet shrink + ombre */
 
 const mainNavbar = document.getElementById('mainNavbar');
 
@@ -109,3 +109,91 @@ if (backToTopButton) {
         });
     });
 }
+
+/*  COMPTEURS ANIMES AU SCROLL — IntersectionObserver */
+ 
+// On récupère tous les éléments qui ont un compteur à animer
+// (statistiques du hero sur index.html + chiffres clés sur about.html)
+const statElements = document.querySelectorAll('.stat-chiffre[data-target], .bento-number[data-target]');
+ 
+// Durée totale de l'animation du compteur (en millisecondes)
+const COUNTER_DURATION = 1500;
+ 
+/**
+ * Anime un élément de 0 jusqu'à sa valeur cible (data-target)
+ * @param {HTMLElement} element - l'élément <p> contenant le chiffre
+ */
+function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'), 10);
+    const startTime = performance.now();
+ 
+    function updateCounter(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / COUNTER_DURATION, 1);
+ 
+        // On calcule la valeur actuelle en fonction de la progression
+        const currentValue = Math.floor(progress * target);
+        element.textContent = currentValue.toLocaleString('fr-FR');
+ 
+        if (progress < 1) {
+            // L'animation continue tant que la progression n'est pas terminée
+            requestAnimationFrame(updateCounter);
+        } else {
+            // On affiche la valeur exacte à la fin pour éviter les arrondis
+            element.textContent = target.toLocaleString('fr-FR');
+        }
+    }
+ 
+    requestAnimationFrame(updateCounter);
+}
+ 
+// Observer qui déclenche l'animation uniquement quand l'élément entre dans le viewport
+const counterObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            // On arrête d'observer cet élément une fois l'animation lancée
+            // (pour ne pas la relancer à chaque scroll)
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.5 // déclenche quand 50% de l'élément est visible
+});
+ 
+// On observe chaque compteur trouvé sur la page
+statElements.forEach(function (element) {
+    counterObserver.observe(element);
+});
+ 
+ 
+/* ANIMATION FADE-IN AU SCROLL — IntersectionObserver */
+ 
+// On sélectionne toutes les sections principales à faire apparaître en fondu
+const fadeSections = document.querySelectorAll(
+    '.section-hero, .section-how, .section-categories, .section-testimonials, ' +
+    '.section-cta, .section-story, .section-team, .section-values, .section-numbers'
+);
+ 
+// On ajoute la classe "fade-section" à chaque section pour préparer l'animation CSS
+fadeSections.forEach(function (section) {
+    section.classList.add('fade-section');
+});
+ 
+// Observer qui déclenche l'apparition en fondu lors de l'entrée dans le viewport
+const fadeObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+            // Une fois visible, on n'a plus besoin de l'observer
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15 // déclenche quand 15% de la section est visible
+});
+ 
+// On observe chaque section
+fadeSections.forEach(function (section) {
+    fadeObserver.observe(section);
+});
